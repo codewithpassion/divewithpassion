@@ -247,16 +247,10 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 gulp.task('prep-dev-deploy', () => {
     
     return new Promise(resolve => {
-      runSequence(['clean', 'wiredep'], 'prep-dev-deploy-add-base', 'build', resolve);
+      runSequence(['clean', 'wiredep'], 'build', resolve);
     })
 });
 
-gulp.task('prep-dev-deploy-add-base', () => {
-  configCopied = true;
-  return gulp.src('app/_config.yml')
-    .pipe(insert.append('base: /page-openrov-com'))
-    .pipe(gulp.dest('.tmp.jekyll.source/'))
-});
 
 gulp.task('deploy', () => {
   
@@ -271,8 +265,8 @@ gulp.task('exec-deploy', () => {
   return gulp.src('dist/**/*')
     .pipe($.ghPages({
       branch: 'gh-pages',
-      remoteUrl: 'git@github.com:codewithpassion/page-openrov-com.git',
-      // push: false
+      // remoteUrl: 'git@github.com:codewithpassion/page-openrov-com.git',
+      push: false
     }));
 
 })

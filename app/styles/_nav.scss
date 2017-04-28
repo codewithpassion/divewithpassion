@@ -5,9 +5,25 @@ nav {
         background-color: white!important;
         min-height: $navbarHeight;
         transition: all 0.4s ease;
+        border-bottom: 1px solid rgba(0,0,0,.2);
 
         &.scrolled {
             min-height: $navbarHeight - 1.6rem;
+        }
+    }
+
+    .navbar-toggler {
+        margin-top: 0.6rem;
+    }
+
+    .navbar-brand {
+        height: 3.8rem;
+        display: flex;
+        align-items: center;
+
+        img { 
+            height: 1.9rem; 
+            @include media-breakpoint-up(xs) { height: 2.2rem; }
         }
     }
 

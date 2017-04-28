@@ -31,51 +31,31 @@ $slick-font-path: '../fonts/';
   }
 }
 
-$fontFamily: Lato, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+.with-cover-image {
+  height: 100%;
+}
 
 /* Space the navbar */
 body {
-    min-height: 55rem;
-    padding-top: $navbarHeight;
+    min-height: 95rem;
 }
 
 body,input,select,textarea {
   font-family: $fontFamily;
 }
 
-
-.btn-spot-cta.b-version { // for A/B testing
-
-    color: $Primary_Blue;
-    background-color: $Primary_Spot_Color;
-    border: solid 1px $Primary_Spot_Color;
-    $hoverColor: desaturate(darken($Primary_Spot_Color, 15%), 8%);
-
-    &:hover {
-        background-color: $hoverColor;
-        border-color: $hoverColor;
-        color: $Primary_Blue;
-    }    
-
-    &:active {
-          background-color: $hoverColor;
-          border-color: $hoverColor;
-    }
-}
-
-.btn-link-cta {
-    color: white;
-    text-decoration: underline;
-
-    &:hover {
-      background-color: darken(white, 10%);
-    }
-}
-
 .btn:hover {
   cursor: pointer;
 }
 
+.sticky.is-sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
 
 @import "spacers";
 @import "helpers";
@@ -85,8 +65,6 @@ body,input,select,textarea {
 @import "nav";
 @import "footer";
 @import "hero";
-@import "contact-support";
 @import "newsletter";
 
-@import "featured-on";
 @import "home"
