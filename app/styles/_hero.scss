@@ -1,0 +1,119 @@
+section .hero {
+    @include header-height();
+
+    &.small {
+        @include header-height-small();
+    }
+    &.x-small {
+        @include header-height-xsmall();
+
+        .title-container {
+            @include media-breakpoint-down(md) {
+                padding-top: 1rem;
+            }
+        }
+    }
+
+    background-size: cover;
+    background-position: 50%;
+
+    .hero-container {
+        @extend .container;
+        height: 100%;
+    }
+
+    .title-container {
+        color: #fff;
+
+        @include media-breakpoint-down(md) {
+            vertical-align: top !important;
+            padding-top: 4rem;
+            height: 100%;
+        }
+        @include media-breakpoint-up(md) {
+            vertical-align: middle !important;
+        }
+
+        .title {
+            font-size: 2.4rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 4rem;
+            }
+
+            font-weight: 300;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.1;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            font-weight: 300;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.5rem;
+            }            
+        }
+
+        .call-to-action {
+
+            position: absolute;
+            bottom: 2.5rem;
+            width: 90%;
+
+            @include media-breakpoint-up(md) {
+                position: static;
+                padding-top: 2rem;
+            }
+        }
+    }
+
+    &.light {
+        .title-container {
+            color: black;
+        }
+    }
+
+    &.trident-and-diver {
+        background-image: url(../images/hero/trident-hawaii.jpg);
+        background-position: 68%;
+        @include media-breakpoint-up(md) {
+            background-position: 50%;
+        }
+    }
+
+    &.trident-reef {
+        background-image: url(../images/hero/trident-reef-wide.jpg);
+        background-position: 40%;
+        @include media-breakpoint-up(md) {
+            background-position: 50%;
+        }
+    }
+
+}
+
+.hero-slider {
+    .slick-dots {
+        bottom: 0.2rem;
+        
+        @include media-breakpoint-up(md) {
+            bottom: 0.8rem;
+        }
+
+        li button {
+            height: 10px;
+            width: 10px;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.5);
+
+            &:before {
+                opacity: 0;    
+            }
+        }
+        li.slick-active button {
+            background: #FFF;
+        }
+    }
+}
+
