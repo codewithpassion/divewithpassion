@@ -55,4 +55,46 @@ $(document).ready(function () {
         // On page load
         stickyToggle(sticky, stickyWrapper, $(window));
     });
+
+    const coverImages = ['shark', 'blue', 'weedy' ];
+    var rand = coverImages[Math.floor(Math.random() * coverImages.length)];
+    $('#cover-image-home').addClass(rand);
+
+
+
+
+    $('.mfp-gallery').each(function () {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery: {
+                enabled: true,
+                preload: [0, 2],
+                navigateByImgClick: true
+            }
+        })
+    });
+    $('.mfp-gallery-zoom').each(function () {
+        $(this).magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            mainClass: 'mfp-with-zoom',
+            gallery: {
+                enabled: true,
+                preload: [0, 2],
+                navigateByImgClick: true
+            },
+            zoom: {
+                enabled: true,
+
+                duration: 300,
+                easing: 'ease-in-out',
+
+                opener: function (openerElement) {
+                    return openerElement.is('img') ? openerElement : openerElement.parent().parent().find('img');
+                }
+            },
+        })
+    });
+
 });

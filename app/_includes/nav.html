@@ -22,23 +22,26 @@
         </a>
         
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto w-100 justify-content-center">
+                <!--<li class="nav-item">
+                    <a class="nav-link" href="{{ site.base }}/trips">Dive trips</a>
+                </li>-->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.base }}/products">PRODUCTS</a>
+                    <a class="nav-link" href="{{ site.base }}/galleries">Galleries</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.base }}/community">COMMUNITY</a>
+                    <a class="nav-link" href="{{ site.base }}/blog">Blog</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ site.base }}/enterprise">ENTERPRISE</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ site.base }}/support">SUPPORT</a>
+                    <a class="nav-link" href="{{ site.base }}/about">About</a>
                 </li>
             </ul>
-            <form class="form-inline mt-2 mt-md-0">
-                <a href="https://store.openrov.com" class="btn btn-primary px-5 my-2 my-sm-0 font-weight-bold">STORE</a>
-            </form>
+            <div class="social-links d-flex flex-row justify-content-between align-items-center">
+                {% for social in site.data.social %}
+                <a href="{{social.link}}" class="" target="_blank">
+                    <span><div class="{{ social.class }}" data-animation="none"></div></span>
+                </a>{% endfor %}
+            </div>
         </div>
     </div>
 </nav>

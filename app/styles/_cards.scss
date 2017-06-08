@@ -1,0 +1,201 @@
+    .card {
+        color: #fff;
+        overflow: hidden;
+        border: none;
+
+        &.card-inverse {
+            .card-text {
+                color: white;
+            }
+        }
+
+        &:hover {
+            .card-img-overlay .card-text::after {
+                text-decoration: underline;
+            }
+        }
+
+        &.bottom {
+            display: flex;
+            align-items: flex-end;
+            .card-img-overlay {
+                top: inherit;
+                padding-bottom: 2rem;
+                padding-top: 2rem;
+            }
+        }
+
+        &.video {
+            &.play {
+                .card-img-overlay {
+                    opacity: 0.3;
+                }
+                .card-video-control {
+                    .play { display: none; }
+                    .pause { display: inherit; }
+                }
+            }
+            &.no-text.play {
+                .card-img-overlay {
+                    opacity: 0;
+                }
+            }
+            &.md-controls {
+                .card-video-control {
+                    .play{
+                        opacity: inherit;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+
+        img.card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &.gradient {
+            .card-img-overlay {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) -5%, rgba(0, 0, 0, 0.7) 130%);
+            }
+        }
+
+        .card-video-control {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .play, .pause {
+                font-size: 3rem;
+                z-index: 1001;
+                cursor: pointer;
+                visibility: hidden;
+
+                @include media-breakpoint-down(md) {
+                    visibility: visible;
+                }
+
+            }
+
+            .play {
+                display: inherit; 
+                opacity: 0.7;
+            }
+            .pause { 
+                display: none; 
+                opacity: 0;
+            }
+        }
+
+        .card-img-overlay {
+            padding-left: 2rem;
+            padding-top: 2rem;
+            z-index: 550;
+            transition: opacity 0.3s;
+
+            .card-title {
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.3;
+                transition: color 0.3s;
+                padding-bottom: 5px;
+                margin-bottom: 13px;
+
+                text-transform: uppercase;
+                position: relative;
+                display: inline-block;
+
+                @include media-breakpoint-up(md) {
+                    font-size: 1.25rem;
+                }
+
+                &::after {
+                    content:"";
+                    position:absolute;
+                    left:0;
+                    bottom:0;
+                    right:-2rem;
+                    margin:auto;
+                    background:white;
+                    height:2px;
+                }
+            }
+                .card-text {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 1.3;
+                    @include media-breakpoint-up(md) {
+                        font-size: 1.25rem;
+                    }
+
+                }
+        }
+
+        &.dark {
+            transition: color 0.3s;
+            $color: rgba(0,0,0,.7);
+            color: $color;
+
+            .card-title {
+                color: $color!important;
+                &:after {
+                    transition: background 0.3s;
+                    background: $color!important;
+                }
+            }
+
+            .card-text:after {
+                transition: color 0.3s;
+            }
+
+            &:hover {
+                $color: #fff;
+                color: $color!important;
+
+                .card-title {
+                    color: $color!important;
+                    &:after {
+                        background: $color!important;
+                    }
+                }
+
+                .card-text:after {
+                    color: $color !important;
+                }
+            }
+        }
+
+        .card-link {
+            &.cover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1000;
+            }
+        }
+
+        video.card-video {
+            height: 101%;
+            width: 101%;
+            position: absolute;
+            top: 50%;
+            bottom: auto;
+            left: 50%;
+            right: auto;
+            transform: translate(-50%,-50%);
+            object-fit: cover;
+            font-family: "object-fit: cover";
+            opacity: .7;
+        }
+
+    }

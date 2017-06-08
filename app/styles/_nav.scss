@@ -38,9 +38,48 @@ nav {
         z-index: 1031;
     }
 
+    .nav-link {
+        position: relative;
+        color: rgba(0, 0, 0, 1)!important;
+        transition: color $standardTransition;
+
+        &:hover {
+            color: $Primary_Blue!important;
+
+            &:after {
+                background-color: $Primary_Blue;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            bottom: 5px;
+            left: 15px;
+            right: 15px;
+            background-color: transparent;
+            transition: background-color $standardTransition;
+        }
+    }
+
     .nav-item > .nav-link {
         font-weight: 600;
         // color: $brand-primary!important;
+    }
+
+    .social-links {
+        width: 8rem;
+
+        .fa {
+            color: black;
+            transition: color $standardTransition;
+            font-size: 1.2rem;
+            
+            &:hover {
+                color: $Primary_Blue!important;
+            }
+        }
     }
 
     @include media-breakpoint-up(lg) {

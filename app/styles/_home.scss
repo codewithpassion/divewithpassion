@@ -1,11 +1,27 @@
 section#cover-image-home {
-    background-image: url('/images/hero/shark.jpg');
+    background-color: white;
     height: 100%;
+    opacity: 0;
+    transition: opacity 2s cubic-bezier(.23,1,.32,1);
     background-position-x: 31%;
+
     @include media-breakpoint-up(md) { 
         background-position-x: 50%;
     }
 
+    &.shark {    
+        background-image: url('/images/hero/shark.jpg');
+        opacity: 1;
+
+    }
+    &.blue {    
+        background-image: url('/images/hero/blue.jpg');
+        opacity: 1;
+    }
+    &.weedy {    
+        background-image: url('/images/hero/weedy.jpg');
+        opacity: 1;
+    }
 }
 
 .cover_section {

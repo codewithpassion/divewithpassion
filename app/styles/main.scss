@@ -57,11 +57,51 @@ body,input,select,textarea {
   width: 100%;
 }
 
+section.grey {
+  background-color: $backgroundGrey;
+}
+.bg-white {
+  background-color: white;
+}
+
+.about-column {
+  position: relative;
+
+  .me {
+    background-image: url(/images/content/dominik.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    position: relative;
+    top: 10px;
+  }
+
+  .name {
+    padding-top: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background-image: url(/images/content/about-column-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
 @import "spacers";
 @import "helpers";
 @import "preloader";
 
 @import "headerHeights";
+@import "cards";
 @import "nav";
 @import "footer";
 @import "hero";
