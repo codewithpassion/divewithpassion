@@ -7,26 +7,25 @@ exclude:
 array: []
 
 # for SEO
-google_site_verification: 6sqA5KNpZtZaQPB-78QcD8CDqXsbhOiqpZGvm NxYDI4
-title: 'OpenROV | Underwater Exploration Robots'
-description: 'OpenROV is a community of DIY explorers who are working together to create more accessible, affordable, and awesome tools for underwater exploration.'
-url: 'https://www.openrov.com'
+# google_site_verification: 
+title: 'Dive with Passion | The world Underwater'
+description: 'Follow my travels through the world underwater.'
+url: 'http://www.divewithpassion.com'
 #author:
 #  twitter: openrov
 
 twitter:
-  username: openrov
+  username: divewithpssion
 
 social:
-  name: OpenROV
+  name: DiveWithPassion
   links:
-    - https://twitter.com/OpenROV
-    - https://www.facebook.com/OpenROV
-    - https://www.instagram.com/openrov_hq
-    - https://www.youtube.com/user/OpenROV
+    - https://twitter.com/divewithpassion
+    - https://www.facebook.com/dominik.fretz
+    - https://www.instagram.com/divewithpassion
+    - https://www.youtube.com/channel/UCcWVgjBiPn1KLkar0VtRsaQ
 
-logo: /assets/openrov/images/openrov-dark.png
+# logo: /assets/openrov/images/openrov-dark.png
 
-social:  
 
 
