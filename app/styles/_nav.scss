@@ -7,6 +7,9 @@ nav {
         transition: all 0.4s ease;
         border-bottom: 1px solid rgba(0,0,0,.2);
 
+        animation-duration: 1.5s;
+        animation-delay: 0.1s;
+
         &.scrolled {
             min-height: $navbarHeight - 1.6rem;
         }
@@ -43,6 +46,7 @@ nav {
         color: rgba(0, 0, 0, 1)!important;
         transition: color $standardTransition;
 
+        &.active,
         &:hover {
             color: $Primary_Blue!important;
 

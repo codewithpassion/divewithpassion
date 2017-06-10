@@ -37,7 +37,8 @@ $slick-font-path: '../fonts/';
 
 /* Space the navbar */
 body {
-    min-height: 95rem;
+    min-height: 40rem;
+    background-color: $backgroundGrey;
 }
 
 body,input,select,textarea {
@@ -60,6 +61,11 @@ body,input,select,textarea {
 section.grey {
   background-color: $backgroundGrey;
 }
+
+section.min-height {
+  min-height: 40rem;
+}
+
 .bg-white {
   background-color: white;
 }
@@ -98,7 +104,6 @@ section.grey {
 
 @import "spacers";
 @import "helpers";
-@import "preloader";
 
 @import "headerHeights";
 @import "cards";

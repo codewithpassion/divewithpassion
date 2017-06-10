@@ -1,6 +1,8 @@
 ---
-title: Grey Nurse Sharks - Carcharius Taurus
+title: Weedies
 layout: default
+slug: portfolio
+page_css: /styles/portfolio.css
 images:
     - 1
     - 2
@@ -10,14 +12,15 @@ images:
     - 6
     - 7
     - 8
+
 ---
 {% include nav.html %}
 
-<section class="galleries pt-5 pb-5">
-    <div class="container bg-white pt-4 pb-4 pl-md-5 pr-md-5">
+<section class="portfolio pt-5 pb-5 min-height">
+    <div class="container pt-4 pb-4 pl-md-5 pr-md-5">
         <div class="row">
-            <div class="col-12 text-center">
-                <h3>Grey Nurse Sharks</h3>
+            <div class="col-12">
+                <h2 class="text-white">Weedy Sea Dragons</h2>
             </div>
         </div>
     </div>
@@ -26,10 +29,12 @@ images:
         <div class="row no-gutters mfp-gallery-zoom">
             {% for item in page.images %}
             <div class="col-md-3 col-6 hover-container hover-img-scale">
-                <img data-src="{{site.base}}/images/galleries/sharks/{{item}}-small.jpg" data-sizes="auto" class="lazyload blur-up"
-                />
+                <img 
+                    data-src="{{site.base}}/images/galleries/weedies/{{item}}-small.jpg"
+                    data-sizes="380px"
+                    class="lazyload animated" />
                 <div class="overlay">
-                    <a href="{{site.base}}/images/galleries/sharks/{{item}}.jpg" class="click-area"></a>
+                    <a href="{{site.base}}/images/galleries/weedies/{{item}}.jpg" class="click-area"></a>
                     <div class="figure-container">
                         <span class="figure-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><g fill="none"><path d="M50.941 34.953v30.094M65.988 50h-30.093"></path></g></svg>                
@@ -41,5 +46,5 @@ images:
             {%endfor%}
         </div>
     </div>
-    
+
 </section>

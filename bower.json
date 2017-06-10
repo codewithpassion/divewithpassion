@@ -9,7 +9,8 @@
     "babel-polyfill": "^0.0.1",
     "country-list": "^2.0.2",
     "magnific-popup": "^1.1.0",
-    "lazysizes": "^3.0.0"
+    "lazysizes": "^3.0.0",
+    "animate.css": "^3.5.2"
   },
   "overrides": {
     "bootstrap": {
